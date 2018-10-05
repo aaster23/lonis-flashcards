@@ -35,7 +35,34 @@
     border-radius: 20px;
     text-align: center;
 }
+.back{
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    background-color: green;
+}
+#YesNoBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
+#yesBox, #noBox, #scoreBox{
+    border: 2px solid white;
+}
+.back p{
+    margin: 10% auto;
+    font-family:'Patua One', cursive;
+    font-size: 15px;
+    color: white;
+}
+#YesNoBox p{
+    margin: 25% auto;
+}
+#yesBox{
+    border-bottom-left-radius: 22%;
+}
+#scoreBox{
+    border-bottom-right-radius: 22%;
+}
 .flashCard .cardcontainer .card .back {
     transform: rotateY(180deg);
 }
@@ -46,7 +73,7 @@
     background: url('https://d1u5p3l4wpay3k.cloudfront.net/hearthstone_gamepedia/thumb/8/89/Card_back-Lunar_New_Year.png/200px-Card_back-Lunar_New_Year.png?version=685e02718b6b6ed7a8a75be0517d7eb4');  
     background-size: cover;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 0.8fr 2fr;
     align-content: center;
 }   
 .questionLabel p{

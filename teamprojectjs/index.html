@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body onload="loadingInitialization()">
     <div id="cardAndMenu">
         <div class="flashCard">
             <div class="cardcontainer">
@@ -20,18 +20,29 @@
                             <p>Question</p>
                         </div>
                         <div class="question">
-                            <p id="questionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec aliquam ante,
+                            <p id="questionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec
+                                aliquam ante,
                                 semper sagittis lectus. Curabitur vestibulum, quam eu tempor placerat, massa nunc
                                 rhoncus nisi, sit amet vulputate quam mi?</p>
-                        </div>
-                        
-                        <div class="utilityBox">
-
                         </div>
                     </div>
                     <div class="back">
                         <div id="answer">
-                            <p id="answerText">Yeee boi</p>
+                            <p id="theAnswerIsLabel">The answer is:</p>
+                        </div>
+                        <div>
+                            <p id="theAnswerLabel"></p>
+                        </div>
+                        <div id="YesNoBox">
+                            <div id="yesBox" onclick="changeCard(true)">
+                                <p>Yes</p>
+                            </div>
+                            <div id="noBox" onclick="changeCard(false)">
+                                <p>No</p>
+                            </div>
+                            <div id="scoreBox">
+                                <p id="score">30%</p>
+                            </div>
                         </div>
                     </div>
                 </div>

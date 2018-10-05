@@ -1,23 +1,33 @@
 let counter = 0;
 const questionsField = document.getElementById('questionText');
-const answersField = document.getElementById('answerText');
-const flashCards = [];
-if (localStorage.getItem('flashCards')) {
-    flashCards = JSON.parse(localStorage.getItem('flashCards'));
+const answersField = document.getElementById('theAnswerLabel');
+const scoreBox = document.getElementById('score');
+let flashCards = [];
+const loadingInitialization = () => {
+    if (localStorage.getItem('flashCards')) {
+        flashCards = JSON.parse(localStorage.getItem('flashCards'));
+    }
+    if (flashCards.length > 0) {
+        const currentCard = flashCards[counter];
+        questionsField.innerText = currentCard.question;
+        answersField.innerText = currentCard.answer;
+        console.log(currentCard)
+        scoreBox.innerText = `${Math.floor((currentCard.yes) / (currentCard.yes + currentCard.no) * 100, 2) || 0 } %`;
+    }
 }
-
 const createNewFlashCardLocally = (questionToPush, answerToPush) => {
     flashCards.push({
         question: questionToPush,
         answer: answerToPush,
-        acRate: 0
+        yes: 0,
+        no: 0,
     })
     localStorage.setItem('flashCards', JSON.stringify(flashCards));
 }
 const createNewFlashCardFromForm = () => {
     const question = document.getElementsByName('qInput')[0];
     const answer = document.getElementsByName('aInput')[0];
-    if (!question.value || !answer.value || question.value.replace(/\s/g,"") == "" || answer.value.replace(/\s/g,"") == "") {
+    if (!question.value || !answer.value || question.value.replace(/\s/g, "") == "" || answer.value.replace(/\s/g, "") == "") {
         alert('Fill the forms properly!')
     } else {
         createNewFlashCardLocally(question.value, answer.value);
@@ -44,16 +54,32 @@ const shuffle = (arrayToShuffle) => {
     return arrayToShuffle;
 }
 
-function changeCard() {
+function changeCard(yesOrNo) {
     if (flashCards.length == 0) {
         throw alert('There are no cards, you must add some!')
     }
-    if (counter == flashCards.length) {
+    if (counter == flashCards.length - 1) {
+        let currentFlashCard = flashCards[counter];
+        do{
         flashCards = shuffle(flashCards);
-        console.log(flashCards);
+        }
+        while(flashCards[0].question == currentFlashCard.question);
         counter = 0;
+        console.log(flashCards)
+    } 
+    changeCurrentCard(yesOrNo);
+    displayNextCard();
     }
-    questionsField.innerText = flashCards[counter].question;
-    answersField.innerText = flashCards[counter].answer;
+
+const changeCurrentCard = (yesOrNo) => {
+    const currentCard = flashCards[counter];
+    yesOrNo ? currentCard.yes += 1 : currentCard.no += 1;
+    console.log(currentCard)
+}
+const displayNextCard = () =>{
     counter++;
+    const currentCard = flashCards[counter];
+    questionsField.innerText = currentCard.question;
+    answersField.innerText = currentCard.answer;
+    scoreBox.innerText = `${Math.floor((currentCard.yes) / (currentCard.yes + currentCard.no) * 100, 2) || 0 } %`;
 }
