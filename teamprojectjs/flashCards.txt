@@ -1,0 +1,6 @@
+What's your name?|John
+How old are you?|19
+What's my favourite number?|3
+What is CSS?|Cascade styling sheets
+Where do I study?|Telerik
+What's the thing I do ?|Code

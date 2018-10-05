@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cardstyle.css">
+    <title>Loni's flashcards</title>
+
+</head>
+
+<body>
+    <div id="cardAndMenu">
+        <div class="flashCard">
+            <div class="cardcontainer">
+                <div class="card">
+                    <div class="front">
+                        <div class="questionLabel">
+                            <p>Question</p>
+                        </div>
+                        <div class="question">
+                            <p id="questionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec aliquam ante,
+                                semper sagittis lectus. Curabitur vestibulum, quam eu tempor placerat, massa nunc
+                                rhoncus nisi, sit amet vulputate quam mi?</p>
+                        </div>
+                        
+                        <div class="utilityBox">
+
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="answer">
+                            <p id="answerText">Yeee boi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nextPrevCard">
+            <div id="nextCardButton">
+                <button onclick="changeCard()">Next Card</button>
+            </div>
+            <div id="createANewFlashCard">
+                Question: <input type="text" name="qInput" required="required"><br>
+                Answer: <input type="text" name="aInput" required="required"><br>
+                <button onclick="createNewFlashCardFromForm()">Create</button>
+            </div>
+            <div id="deleteButton">
+                Question to delete: <input type="text" name="deleteQuestion" required="required"><br>
+                <button onclick="deleteFlashCardQuestions()">Delete a card</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="initializeVariables.js"></script>
+    <script src="javascript.js"></script>
+
+
+</body>
+
+</html>
