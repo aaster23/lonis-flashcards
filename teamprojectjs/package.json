@@ -10,5 +10,10 @@
   "description": "",
   "dependencies": {
     "live-server": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-google": "^0.10.0"
   }
 }
