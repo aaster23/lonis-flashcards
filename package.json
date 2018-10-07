@@ -7,7 +7,6 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "live-server": "^1.2.0"
   },
@@ -15,5 +14,15 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.6.1",
     "eslint-config-google": "^0.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/aaster23/lonis-flashcards.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://gitlab.com/aaster23/lonis-flashcards/issues"
+  },
+  "homepage": "https://gitlab.com/aaster23/lonis-flashcards#README",
+  "description": ""
 }

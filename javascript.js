@@ -69,7 +69,7 @@ const changeCard = function(yesOrNo) {
   }
   changeCurrentCard(yesOrNo);
   displayNextCard();
-}
+};
 
 const changeCurrentCard = (yesOrNo) => {
   const currentCard = flashCards[counter];
