@@ -5,70 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="cardstyle.css">
-    <link rel="icon" href="./img/favicon.png">
-    <title>Loni's flashcards</title>
-
+    <title>Loni's Flashcards</title>
+    <link rel="stylesheet" href="art/style.css">
 </head>
 
 <body onload="loadingInitialization()">
-    <div id="cardAndMenu">
-        <div class="flashCard">
-            <div class="cardcontainer">
-                <div class="card">
-                    <div class="front">
-                        <div class="questionLabel">
-                            <p>Question</p>
+    <div id="wrapper">
+        <div id="lonnisMessage">
+            <h1>Welcome to Loni's flashcards</h1>
+        </div>
+        <div id="buttonsAndCardWrapper">
+            <div id="buttonsWrapper">
+                <img src="art/Create-button.png" onclick="" onmouseover="this.src='art/Create-Hover-Button.png'" onmouseout="this.src='art/Create-button.png'"/>
+                <img src="art/Archive-Button.png" onclick="deleteFlashCardQuestions()" onmouseover="this.src='art/Archive-Hover-Button.png'" onmouseout="this.src='art/Archive-Button.png'"/>
+            </div>
+            <div class="flashCard">
+                <div class="cardcontainer">
+                    <div class="card">
+                        <div class="front" onclick='rotateContainer(true)'>
+                            <div id="question">
+                                <p id="questionText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus nostrum delectus dicta exercitationem aliquam blanditiis quam, obcaecati enim dolore error voluptatem debitis quaerat nemo minus nesciunt ratione ad at dolor quisquam culpa. Voluptatum, eaque non.
+                                    </p>
+                            </div>
                         </div>
-                        <div class="question">
-                            <p id="questionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec
-                                aliquam ante,
-                                semper sagittis lectus. Curabitur vestibulum, quam eu tempor placerat, massa nunc
-                                rhoncus nisi, sit amet vulputate quam mi?</p>
+                        <div class="back" onclick='rotateContainer(false)'>
+                            <p id="theAnswerLabel">
+
+                            </p>
                         </div>
                     </div>
-                    <div class="back">
-                        <div id="answer">
-                            <p id="theAnswerIsLabel">The answer is:</p>
-                        </div>
-                        <div>
-                            <p id="theAnswerLabel"></p>
-                        </div>
-                        <div id="YesNoBox">
-                            <div id="yesBox" onclick="changeCard(true)">
-                                <p>Yes</p>
-                            </div>
-                            <div id="noBox" onclick="changeCard(false)">
-                                <p>No</p>
-                            </div>
-                            <div id="scoreBox">
-                                <p id="score">30%</p>
-                            </div>
-                        </div>
+                    <div id="nextButton" onclick = "displayNextCard()">
+                        <img src="art/Next-Button.png" onclick:"#" onmouseover="this.src='art/Next-Hover-Button.png'" onmouseout="this.src='art/Next-Button.png'"/>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="nextPrevCard">
-            <div id="nextCardButton">
-                <button onclick="changeCard()">Next Card</button>
-            </div>
-            <div id="createANewFlashCard">
-                Question: <input type="text" name="qInput" required="required"><br>
-                Answer: <input type="text" name="aInput" required="required"><br>
-                <button onclick="createNewFlashCardFromForm()">Create</button>
-            </div>
-            <div id="deleteButton">
-                Question to delete: <input type="text" name="deleteQuestion" required="required"><br>
-                <button onclick="deleteFlashCardQuestions()">Delete a card</button>
+            <div id="buttons2Wrapper">
+                <img id="yesButton" src="art/I-Answered-Button.png" onclick="changeCard(true)" onmouseover="this.src='art/I-Answered-Hover-Button.png'" onmouseout="this.src='art/I-Answered-Button.png'" />
+                <img id="noButton" src="art/I-Didnt-Button.png" onclick="changeCard(false)" onmouseover="this.src='art/I-Didnt-Hover-Button.png'" onmouseout="this.src='art/I-Didnt-Button.png'" />
             </div>
         </div>
     </div>
-    </div>
-    <script src="initializeVariables.js"></script>
     <script src="javascript.js"></script>
-
-
 </body>
 
 </html>
