@@ -6,44 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Loni's Flashcards</title>
-    <link rel="stylesheet" href="art/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./art/favicon.png">
 </head>
 
 <body onload="loadingInitialization()">
     <div id="wrapper">
         <div id="lonnisMessage">
-            <h1>Welcome to Loni's flashcards</h1>
+            <h1>Welcome to Loni's Flashcards</h1>
         </div>
         <div id="buttonsAndCardWrapper">
             <div id="buttonsWrapper">
-                <img src="art/Create-button.png" onclick="" onmouseover="this.src='art/Create-Hover-Button.png'" onmouseout="this.src='art/Create-button.png'"/>
-                <img src="art/Archive-Button.png" onclick="deleteFlashCardQuestions()" onmouseover="this.src='art/Archive-Hover-Button.png'" onmouseout="this.src='art/Archive-Button.png'"/>
+                <img src="art/Create-button.png" onclick="" onmouseover="this.src='art/Create-Hover-Button.png'"
+                    onmouseout="this.src='art/Create-button.png'" />
+                <img src="art/Archive-Button.png" onclick="deleteFlashCardQuestions()" onmouseover="this.src='art/Archive-Hover-Button.png'"
+                    onmouseout="this.src='art/Archive-Button.png'" />
             </div>
             <div class="flashCard">
                 <div class="cardcontainer">
                     <div class="card">
                         <div class="front" onclick='rotateContainer(true)'>
                             <div id="question">
-                                <p id="questionText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus nostrum delectus dicta exercitationem aliquam blanditiis quam, obcaecati enim dolore error voluptatem debitis quaerat nemo minus nesciunt ratione ad at dolor quisquam culpa. Voluptatum, eaque non.
-                                    </p>
+                                <p id="questionText"></p>
                             </div>
                         </div>
                         <div class="back" onclick='rotateContainer(false)'>
-                            <p id="theAnswerLabel">
-
-                            </p>
+                            <p id="theAnswerLabel"></p>
                         </div>
                     </div>
-                    <div id="nextButton" onclick = "displayNextCard()">
-                        <img src="art/Next-Button.png" onclick:"#" onmouseover="this.src='art/Next-Hover-Button.png'" onmouseout="this.src='art/Next-Button.png'"/>
+                    <div id="nextButton" onclick="displayNextCard()">
+                        <img src="art/Next-Button.png" onclick:"#" onmouseover="this.src='art/Next-Hover-Button.png'"
+                            onmouseout="this.src='art/Next-Button.png'" />
                     </div>
                 </div>
             </div>
             <div id="buttons2Wrapper">
-                <img id="yesButton" src="art/I-Answered-Button.png" onclick="changeCard(true)" onmouseover="this.src='art/I-Answered-Hover-Button.png'" onmouseout="this.src='art/I-Answered-Button.png'" />
-                <img id="noButton" src="art/I-Didnt-Button.png" onclick="changeCard(false)" onmouseover="this.src='art/I-Didnt-Hover-Button.png'" onmouseout="this.src='art/I-Didnt-Button.png'" />
+                <img id="yesButton" src="art/I-Answered-Button.png" onclick="changeCard(true)" onmouseover="this.src='art/I-Answered-Hover-Button.png'"
+                    onmouseout="this.src='art/I-Answered-Button.png'" />
+                <img id="noButton" src="art/I-Didnt-Button.png" onclick="changeCard(false)" onmouseover="this.src='art/I-Didnt-Hover-Button.png'"
+                    onmouseout="this.src='art/I-Didnt-Button.png'" />
             </div>
         </div>
+    </div>
+    <div><img class="lollipop" src="./art/circle.png"></div>
+    <div id="cakes">
+        <img src="./art/Lollypops.png" />
+    </div>
+    <div class="white-line"></div>
+    <div class="footer">
+        <p>All Right Reserved. Loni's Flashcards® 2018</p>
     </div>
     <script src="javascript.js"></script>
 </body>

@@ -125,8 +125,8 @@ const borderBasedOnACRate = (currentCard) =>{
     }
 }
 
-createNewFlashCardLocally('Ye boi', 'No boy');
-createNewFlashCardLocally('Da', 'Ne')
-createNewFlashCardLocally('Shte zatvarq lih ostela', 'da');
-createNewFlashCardLocally('i az ko praq', 'nikoi ne znae');
-createNewFlashCardLocally('bace kiro','100 tei prai we')
+createNewFlashCardLocally('Can you name two programming paradigms important for JavaScript app developers?', 'Question 1 answer');
+createNewFlashCardLocally('What is a “closure” in JavaScript? Provide an example.', 'Question 2 answer');
+createNewFlashCardLocally('What is the difference between const, let and var?', 'Question 3 answer');
+createNewFlashCardLocally('What is scope in JavaScript?', 'Question 4 answer');
+createNewFlashCardLocally('What is the difference between function expression, fat arrows and function declaration What is “this in JavaScript? ','Question 5 answer');

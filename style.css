@@ -1,0 +1,169 @@
+@font-face {
+    font-family: Palladius;
+    src: url('/fonts/Palladius.ttf');
+}
+
+html {
+    font-size: 13px;
+    font-family: Palladius;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #C1E6F0;
+}
+
+body #cakes img {
+    width: 90rem;
+    height: 50rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body #wrapper {
+    position: relative;
+    display: grid;
+}
+
+body #wrapper #lonnisMessage h1 {
+    text-align: center;
+    color: #FD83BA;
+    padding: 1rem 0 1rem 0;
+    background-color: white;
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+body #wrapper #buttonsAndCardWrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+body #wrapper #buttonsAndCardWrapper #buttonsWrapper,
+#buttons2Wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: inherit;
+    margin: 50% auto;
+}
+
+body #wrapper #buttonsAndCardWrapper #buttonsWrapper img,
+#buttons2Wrapper img {
+    max-width: 15rem;
+}
+
+body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer #nextButton {
+    position: absolute;
+    margin: 140%;
+    margin-left: 13.8%;
+}
+
+body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer #nextButton img {
+    max-width: 15rem;
+}
+
+body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer .card .front #question #questionText {
+    margin: 25% 10% 0 12%;
+    font-size: 1.4rem;
+    font-size-adjust: inherit;
+}
+
+body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer .card .back #theAnswerLabel {
+    margin: 25% 10% 0 12%;
+    font-size: 1.4rem;
+    font-size-adjust: inherit;
+}
+
+.flashCard .cardcontainer {
+    perspective: 700;
+    width: 20rem;
+    height: 27rem;
+    position: relative;
+}
+
+.flashCard .cardcontainer .card {
+    width: 20rem;
+    height: 27rem;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+.flashCard .cardcontainer .card .back {
+    transform: rotateY(180deg);
+}
+
+.front {
+    display: block;
+    grid-template-rows: 16rem 3rem 2rem;
+    align-content: center;
+    text-align: center;
+}
+
+.back {
+    background-image: url('Answer-100.png');
+    background-size: 100%;
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 20rem;
+    height: 27rem;
+    backface-visibility: hidden;
+    background-color: #c2c3c4;
+    text-align: center;
+    background-image: url('./art/Question-Card.png');
+    background-size: 100%;
+}
+
+.white-line {
+    background: white;
+    height: 10rem;
+}
+
+.lollipop {
+    width: 15rem;
+    height: 15rem;
+    animation: spin 14s linear;
+    position: absolute;
+    left: 45.5rem;
+    top: 45.5rem;
+}
+
+.footer {
+    background: #C1E6F0;
+    height: 3rem;
+}
+
+.footer p {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
