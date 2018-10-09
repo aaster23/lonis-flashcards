@@ -3,6 +3,47 @@
     src: url('/fonts/Palladius.ttf');
 }
 
+
+@-ms-keyframes spin {
+    from {
+        -ms-transform: rotate(0deg);
+    }
+
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 html {
     font-size: 13px;
     font-family: Palladius;
@@ -19,6 +60,9 @@ body #cakes img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    top: -10rem;
+    left: 0rem;
 }
 
 body #wrapper {
@@ -126,15 +170,6 @@ body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer .card .back #theA
     height: 10rem;
 }
 
-.lollipop {
-    width: 15rem;
-    height: 15rem;
-    animation: spin 14s linear;
-    position: absolute;
-    left: 45.5rem;
-    top: 45.5rem;
-}
-
 .footer {
     background: #C1E6F0;
     height: 3rem;
@@ -147,23 +182,34 @@ body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer .card .back #theA
     font-weight: normal;
 }
 
-@-moz-keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
+.lollipop {
+    width: 15rem;
+    height: 15rem;
+    left: -45.5rem;
+    top: 45.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 3rem;
+    left: -3rem;
+    z-index: 10;
 
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
 
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
