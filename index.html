@@ -8,34 +8,35 @@
     <title>Loni's Flashcards</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./art/favicon.png">
+    <script>var counter = 0;</script>
 </head>
 
-<body onload="loadingInitialization()">
+<body>
     <div id="wrapper">
         <div id="lonnisMessage">
             <h1>Welcome to Loni's Flashcards</h1>
         </div>
         <div id="buttonsAndCardWrapper">
             <div id="buttonsWrapper">
-                <img src="art/Create-button.png" onclick="" onmouseover="this.src='art/Create-Hover-Button.png'"
+                <img id="createButton" src="art/Create-button.png" onclick="" onmouseover="this.src='art/Create-Hover-Button.png'"
                     onmouseout="this.src='art/Create-button.png'" />
-                <img src="art/Archive-Button.png" onclick="deleteFlashCardQuestions()" onmouseover="this.src='art/Archive-Hover-Button.png'"
+                <img id="archiveButton" src="art/Archive-Button.png" onclick="deleteFlashCardQuestions()" onmouseover="this.src='art/Archive-Hover-Button.png'"
                     onmouseout="this.src='art/Archive-Button.png'" />
             </div>
             <div class="flashCard">
                 <div class="cardcontainer">
                     <div class="card">
-                        <div class="front" onclick='rotateContainer(true)'>
+                        <div class="front">
                             <div id="question">
                                 <p id="questionText"></p>
                             </div>
                         </div>
-                        <div class="back" onclick='rotateContainer(false)'>
+                        <div class="back">
                             <p id="theAnswerLabel"></p>
                         </div>
                     </div>
-                    <div id="nextButton" onclick="displayNextCard()">
-                        <img src="art/Next-Button.png" onclick:"#" onmouseover="this.src='art/Next-Hover-Button.png'"
+                    <div id="nextButton">
+                        <img src="art/Next-Button.png" onmouseover="this.src='art/Next-Hover-Button.png'"
                             onmouseout="this.src='art/Next-Button.png'" />
                     </div>
                 </div>
@@ -47,6 +48,18 @@
                     onmouseout="this.src='art/I-Didnt-Button.png'" />
             </div>
         </div>
+        <div id="formWrapper">
+            <div id="formCards">
+                <div id="questionWrapper">
+                    <textarea id="questionInput" type="required" maxlength="150">Insert question here:</textarea>
+                </div>
+                <div id="answerWrapper">
+                    <textarea id="answerInput" type="required" maxlength="150">Insert answer here:</textarea>
+                </div>
+            </div>
+            <img id="createCardButton" src="art/Create-Card-Buttons-Hover.png">
+            <img id="exitCreateForm" src="art/X-Button-Hover.png">
+          </div>
     </div>
     <div><img class="lollipop" src="./art/circle.png"></div>
         <div id="cakes">
@@ -56,7 +69,7 @@
     <div class="footer">
         <p>All Right Reserved. Loni's Flashcards® 2018</p>
     </div>
-    <script src="javascript.js"></script>
+    <script src="dist/main.js"></script>
 </body>
 
 </html>
