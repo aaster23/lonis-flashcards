@@ -1,5 +1,5 @@
 import { questionsField, answersField, flashCards } from './loading.js';
-import {changeCard, changeCurrentCard, displayNextCard, shuffle} from './createAndDeleteCards.js';
+import { changeCard, changeCurrentCard, displayNextCard, shuffle } from './createAndDeleteCards.js';
 import * as $ from 'jquery';
 
 const createNewFlashCardLocally = (questionToPush, answerToPush) => {

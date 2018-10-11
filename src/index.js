@@ -45,14 +45,14 @@ $('#createCardButton').click(function() {
   createNewFlashCardFromForm();
 });
 
-$("#questionInput").click(function(){
-  if($("#questionInput").val() === "Insert question here:"){
-    $("#questionInput").val('');
+$('#questionInput').click(function() {
+  if ($('#questionInput').val() === 'Insert question here:') {
+    $('#questionInput').val('');
   }
-})
+});
 
-$("#answerInput").click(function(){
-  if($("#answerInput").val() === "Insert answer here:"){
-    $("#answerInput").val('');
+$('#answerInput').click(function() {
+  if ($('#answerInput').val() === 'Insert answer here:') {
+    $('#answerInput').val('');
   }
-})
+});

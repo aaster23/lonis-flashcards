@@ -3,7 +3,6 @@
     src: url('/fonts/Palladius.ttf');
 }
 
-
 @-ms-keyframes spin {
     from {
         -ms-transform: rotate(0deg);
@@ -95,9 +94,22 @@ body #wrapper #buttonsAndCardWrapper #buttonsWrapper,
     margin: 50% auto;
 }
 
+#create-Card-Button-X {
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#create-Card-Button-X img {
+    max-width: 15rem;
+}
+
 body #wrapper #buttonsAndCardWrapper #buttonsWrapper img,
 #buttons2Wrapper img {
     max-width: 15rem;
+}
+
+#exitCreateForm {
+    max-height: 4.3rem;
 }
 
 body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer #nextButton {
@@ -122,58 +134,62 @@ body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer .card .back #theA
     font-size-adjust: inherit;
 }
 
-body #wrapper #formWrapper{
-    display: block;
-    z-index: 20;
-    width: 80rem;
-    height: 40rem;
-    margin: 5% auto;
+body #wrapper #formWrapper {
     display: none;
 }
 
-body #wrapper #formCards{
+body #wrapper #formCards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
+    margin-left: 31%;
+    margin-right: 31%;
+
 }
 
-body #wrapper #formCards #questionWrapper, body #wrapper #formCards #answerWrapper{
-    background-size: 100%;  
-    width: 30em;
-    height: 40em;
-    margin: 0 auto;
-}
-
-body #wrapper #formCards #questionWrapper textarea, body #wrapper #formCards #answerWrapper textarea{
-    opacity: 1;
-    background-color: rgba(0,0,0, 0);
+body #wrapper #formCards #questionWrapper textarea,
+body #wrapper #formCards #answerWrapper textarea {
+    background-color: rgba(0, 0, 0, 0);
     margin-top: 20%;
-    width: 300px;
     height: 250px;
     text-align: cetner;
-    font-size: 2em;
     overflow: hidden;
     border: 0;
     resize: none;
     outline: none;
+    font-size: 1.4rem;
+    font-size-adjust: inherit;
+    font-family: Palladius;
 }
 
 
-body #wrapper #formCards #questionWrapper{
+body #wrapper #formCards #questionWrapper {
     background-image: url('./art/Question-Card.png');
+    background-size: 100%;
+    width: 20rem;
+    height: 27rem;
+    margin: 0 auto;
 }
 
-body #wrapper #formCards #answerWrapper{
+body #wrapper #formCards #answerWrapper {
     background-image: url('./art/Answer-Card.png');
+    background-size: 100%;
+    width: 20rem;
+    height: 27rem;
+    margin: 0 auto;
 }
+
+
+body #wrapper #formWrapper {
+    text-align: center;
+    margin: 0;
+}
+
 .flashCard .cardcontainer {
     perspective: 700;
     width: 20rem;
     height: 27rem;
     position: relative;
-}
-#formWrapper{
-    text-align: center;
 }
 
 .flashCard .cardcontainer .card {
@@ -212,17 +228,15 @@ body #wrapper #formCards #answerWrapper{
     background-size: 100%;
 }
 
-.white-line {
-    background: white;
-    height: 10rem;
-}
-
 .footer {
     background: #C1E6F0;
     height: 3rem;
 }
 
 .footer p {
+    margin: 0;
+    padding: 1rem;
+    background-color: rgb(150, 204, 219);
     text-align: center;
     color: white;
     font-size: 1.5rem;
@@ -260,7 +274,3 @@ body #wrapper #formCards #answerWrapper{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-
-
-
-

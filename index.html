@@ -20,8 +20,8 @@
             <div id="buttonsWrapper">
                 <img id="createButton" src="art/Create-button.png" onclick="" onmouseover="this.src='art/Create-Hover-Button.png'"
                     onmouseout="this.src='art/Create-button.png'" />
-                <img id="archiveButton" src="art/Archive-Button.png" onclick="deleteFlashCardQuestions()" onmouseover="this.src='art/Archive-Hover-Button.png'"
-                    onmouseout="this.src='art/Archive-Button.png'" />
+                <img id="archiveButton" src="art/Delete-Card-Button.png" onclick="deleteFlashCardQuestions()" onmouseover="this.src='art/Delete-Card-Button-Hover.png'"
+                    onmouseout="this.src='art/Delete-Card-Button.png'" />
             </div>
             <div class="flashCard">
                 <div class="cardcontainer">
@@ -36,8 +36,7 @@
                         </div>
                     </div>
                     <div id="nextButton">
-                        <img src="art/Next-Button.png" onmouseover="this.src='art/Next-Hover-Button.png'"
-                            onmouseout="this.src='art/Next-Button.png'" />
+                        <img src="art/Next-Button.png" onmouseover="this.src='art/Next-Hover-Button.png'" onmouseout="this.src='art/Next-Button.png'" />
                     </div>
                 </div>
             </div>
@@ -57,17 +56,21 @@
                     <textarea id="answerInput" type="required" maxlength="150">Insert answer here:</textarea>
                 </div>
             </div>
-            <img id="createCardButton" src="art/Create-Card-Buttons-Hover.png">
-            <img id="exitCreateForm" src="art/X-Button-Hover.png">
-          </div>
+            <div id="create-Card-Button-X">
+                <img id="createCardButton" src="art/Create-Card-Buttons.png" onmouseover="this.src='art/Create-Card-Buttons-Hover.png'"
+                onmouseout="this.src='art/Create-Card-Buttons.png'" />
+                <img id="exitCreateForm" src="art/Go-Back-Button.png" onmouseover="this.src='art/Go-Back-Hover-Button.png'"
+                onmouseout="this.src='art/Go-Back-Button.png'" />
+            </div>
+        </div>
     </div>
     <div><img class="lollipop" src="./art/circle.png"></div>
-        <div id="cakes">
-            <img src="./art/Lollypops.png" />
-        </div></div>
-    <div class="white-line"></div>
+    <div id="cakes">
+        <img src="./art/Lollypops.png" />
+    </div>
+    </div>
     <div class="footer">
-        <p>All Right Reserved. Loni's Flashcards® 2018</p>
+        <p>All Right Reserved. Loni's Flashcards&#174;. Telerik Academy - JavaScript August 2018</p>
     </div>
     <script src="dist/main.js"></script>
 </body>

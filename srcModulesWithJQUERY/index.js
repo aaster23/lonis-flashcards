@@ -26,6 +26,6 @@ $('#noButton').click(function() {
   changeCard(false);
 });
 
-$('#nextButton').click(function(){
+$('#nextButton').click(function() {
   displayNextCard();
 });
