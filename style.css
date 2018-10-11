@@ -51,6 +51,10 @@ html {
 body {
     margin: 0 auto;
     background-color: #C1E6F0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 15fr 17fr 1fr;
+    max-height: 1000px;
 }
 
 body #cakes img {
@@ -67,6 +71,8 @@ body #cakes img {
 body #wrapper {
     position: relative;
     display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 body #wrapper #lonnisMessage h1 {
@@ -231,6 +237,8 @@ body #wrapper #formWrapper {
 .footer {
     background: #C1E6F0;
     height: 3rem;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 .footer p {
@@ -273,4 +281,22 @@ body #wrapper #formWrapper {
     animation-duration: 4000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+#sideWrapper{
+  background-color: aqua;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 32;
+  width: 20rem;
+  overflow: scroll;
+  top: 0;
+  bottom: 0;
+  height: auto;
+}
+
+#candyWrapper {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
