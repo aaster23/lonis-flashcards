@@ -13,6 +13,13 @@
 
 <body>
   <div id="wrapper">
+    <div id="soundButtons">
+      <audio loop autoplay id="sound1" src="./sound/Sound.mp3" preload="auto"></audio>
+      <img id="soundEffect" src="art/Play-Audio-Button.png" onclick="document.getElementById('sound1').play();"
+        onmouseover="this.src='art/Play-Audio-Button-Hover.png'" onmouseout="this.src='art/Play-Audio-Button.png'" />
+      <img id="soundEffect" src="art/Stop-Audio.png" onclick="document.getElementById('sound1').pause();" onmouseover="this.src='art/Stop-Audio-Hover.png'"
+        onmouseout="this.src='art/Stop-Audio.png'" />
+    </div>
     <div id="lonnisMessage">
       <h1>Welcome to Loni's Flashcards</h1>
     </div>
@@ -41,11 +48,6 @@
         </div>
       </div>
       <div id="buttons2Wrapper">
-        <audio loop id="sound1" src="./sound/Sound.mp3" preload="auto"></audio>
-        <img id="soundEffect" src="art/Play-Audio-Button.png" onclick="document.getElementById('sound1').play();"
-          onmouseover="this.src='art/Play-Audio-Button-Hover.png'" onmouseout="this.src='art/Play-Audio-Button.png'" />
-        <img id="soundEffect" src="art/Stop-Audio.png" onclick="document.getElementById('sound1').pause();" onmouseover="this.src='art/Stop-Audio-Hover.png'"
-          onmouseout="this.src='art/Stop-Audio.png'" />
         <img id="yesButton" src="art/I-Answered-Button.png" onmouseover="this.src='art/I-Answered-Hover-Button.png'"
           onmouseout="this.src='art/I-Answered-Button.png'" />
         <img id="noButton" src="art/I-Didnt-Button.png" onmouseover="this.src='art/I-Didnt-Hover-Button.png'"

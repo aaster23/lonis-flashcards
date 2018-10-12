@@ -48,7 +48,7 @@ html {
     font-family: Palladius;
 }
 
-body {
+html body {
     margin: 0 auto;
     background-color: #C1E6F0;
     display: grid;
@@ -63,7 +63,7 @@ body {
     background-size: cover;
 }
 
-body #cakes img {
+html body div#candyWrapper div#cakes img {
     width: 90rem;
     height: 50rem;
     display: block;
@@ -74,23 +74,25 @@ body #cakes img {
     left: 0rem;
 }
 
-body #wrapper {
+html body div#wrapper {
     position: relative;
     display: grid;
     grid-column-start: 1;
     grid-column-end: 3;
+
 }
 
-body #wrapper #lonnisMessage h1 {
+html body div#wrapper div#lonnisMessage h1 {
     text-align: center;
     color: #FD83BA;
     padding: 1rem 0 1rem 0;
     background-color: white;
     font-size: 4rem;
     font-weight: normal;
+    margin-top: 1rem;
 }
 
-body #wrapper #buttonsAndCardWrapper {
+html body div#wrapper div#buttonsAndCardWrapper {
     position: relative;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
@@ -104,11 +106,23 @@ body #wrapper #buttonsAndCardWrapper #buttonsWrapper,
     flex-direction: column;
     flex-grow: inherit;
     margin: 50% auto;
-    margin-top: 25%;
 }
 
-#create-Card-Button-X {
-    margin: 2rem auto;
+div#soundButtons {
+    margin-left: auto;
+    margin-right: 20rem;
+}
+
+div#soundButtons img {
+    max-width: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+#create-Card-Button-X img {
+    max-width: 15rem;
+    margin: auto;
+
 }
 
 #createCardButton,
@@ -120,7 +134,6 @@ body #wrapper #buttonsAndCardWrapper #buttonsWrapper img,
 #buttons2Wrapper img {
     max-width: 15rem;
 }
-
 
 body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer #nextButton {
     position: absolute;
@@ -146,6 +159,7 @@ body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer .card .back #theA
 
 body #wrapper #formWrapper {
     display: none;
+    margin: 0;
 }
 
 body #wrapper #formCards {
@@ -171,7 +185,6 @@ body #wrapper #formCards #answerWrapper textarea {
     font-family: Palladius;
 }
 
-
 body #wrapper #formCards #questionWrapper {
     background-image: url('./art/Question-Card.png');
     background-size: 100%;
@@ -192,6 +205,11 @@ body #wrapper #formCards #answerWrapper {
 body #wrapper #formWrapper {
     text-align: center;
     margin: 0 auto;
+}
+
+body #candyWrapper {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .flashCard .cardcontainer {
@@ -231,7 +249,6 @@ body #wrapper #formWrapper {
     width: 20rem;
     height: 27rem;
     backface-visibility: hidden;
-    background-color: #c2c3c4;
     text-align: center;
     background-image: url('./art/Question-Card.png');
     background-size: 100%;
@@ -284,22 +301,4 @@ body #wrapper #formWrapper {
     animation-duration: 4000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-}
-
-#sideWrapper {
-    background-color: aqua;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 32;
-    width: 20rem;
-    overflow: scroll;
-    top: 0;
-    bottom: 0;
-    height: auto;
-}
-
-#candyWrapper {
-    grid-column-start: 1;
-    grid-column-end: 3;
 }
