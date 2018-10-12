@@ -23,6 +23,9 @@ const createNewFlashCardFromForm = () => {
   || answer.val().replace(/\s/g, '') === '') {
     alert('Fill the forms properly!');
   } else {
+    if (!flashCards.filter((e) => e.question === question.val()).length > 0) {
+      alert('Flash card created successfully');
+    }
     createNewFlashCardLocally(question.val(), answer.val());
     question.val('Insert question here:');
     answer.val('Insert answer here:');
