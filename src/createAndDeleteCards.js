@@ -19,9 +19,6 @@ const createNewFlashCardLocally = (questionToPush, answerToPush) => {
 const createNewFlashCardFromForm = () => {
   const question = $('#questionInput');
   const answer = $('#answerInput');
-  console.log(question);
-  console.log(answer);
-
   if (!question.val() || !answer.val() || question.val().replace(/\s/g, '') === ''
   || answer.val().replace(/\s/g, '') === '') {
     alert('Fill the forms properly!');

@@ -32,6 +32,7 @@ const manipulateDom = function() {
 
   $('#createCardButton').click(function() {
     createNewFlashCardFromForm();
+    alert('Successfully created flash card!')
   });
 
   $('#questionInput').click(function() {
