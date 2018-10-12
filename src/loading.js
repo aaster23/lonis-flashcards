@@ -1,5 +1,4 @@
 import * as $ from 'jquery';
-
 const questionsField = $('#questionText');
 const answersField = $('t#heAnswerLabel');
 let flashCards = [];
@@ -9,7 +8,7 @@ $('body').ready(function() {
     flashCards = JSON.parse(localStorage.getItem('flashCards'));
   }
   if (flashCards.length > 0) {
-    const currentCard = flashCards[counter];
+    const currentCard = flashCards[0];
     $('#questionText').text(currentCard.question);
     $('#theAnswerLabel').text(currentCard.answer);
     console.log(currentCard);
