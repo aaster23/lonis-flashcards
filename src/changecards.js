@@ -6,6 +6,7 @@ import {
 } from './loading.js';
 
 const borderBasedOnACRate = (currentCard) => {
+  console.log(`${currentCard.yes} yes with ${currentCard.no} with AC: ${currentCard.ACRate}`);
   if (currentCard.ACRate <= 50) {
     $('.back').css('background-image', 'url(\'art/Answer-50.png\')');
   } else if (currentCard.ACRate <= 75) {

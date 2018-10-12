@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
 const questionsField = $('#questionText');
-const answersField = $('t#heAnswerLabel');
+const answersField = $('#theAnswerLabel');
 let flashCards = [];
 
 $('body').ready(function() {
