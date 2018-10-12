@@ -18,7 +18,7 @@ The project's purpose is to create an single page application. The application w
 * https://gitlab.com/aaster23/lonis-flashcards
 
 
-##Functionalities:
+## Functionalities:
 * Create new flash cards 
 - Add a new flash card
 - Have no duplicate flash 
