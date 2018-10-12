@@ -20,14 +20,13 @@ const manipulateDom = function() {
   });
 
   $('#createButton').click(function() {
-    console.log('chudomir');
-    $('#buttonsAndCardWrapper').toggle();
-    $('#formWrapper').toggle();
+    $('#buttonsAndCardWrapper').hide('Scale');
+    $('#formWrapper').show('Slide');
   });
 
   $('#exitCreateForm').click(function() {
-    $('#buttonsAndCardWrapper').toggle();
-    $('#formWrapper').toggle();
+    $('#buttonsAndCardWrapper').show('Scale');
+    $('#formWrapper').hide('Scale');
   });
 
   $('#createCardButton').click(function() {
@@ -46,7 +45,6 @@ const manipulateDom = function() {
     }
   });
 };
-
 
 export {
   manipulateDom,

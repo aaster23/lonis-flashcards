@@ -51,9 +51,6 @@ html {
 html body {
     margin: 0 auto;
     background-color: #C1E6F0;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 15fr 17fr 1fr;
     max-height: 1000px;
     background-image: url("./art/Background.png");
     height: 100%;
@@ -108,16 +105,17 @@ body #wrapper #buttonsAndCardWrapper #buttonsWrapper,
     margin: 50% auto;
 }
 
-div#soundButtons {
+#soundButtons {
     margin-left: auto;
     margin-right: 20rem;
 }
 
-div#soundButtons img {
+#soundButtons img {
     max-width: 10rem;
     margin-top: 1rem;
     margin-bottom: 0;
 }
+
 
 #create-Card-Button-X img {
     max-width: 15rem;
