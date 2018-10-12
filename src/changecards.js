@@ -5,8 +5,25 @@ import {
   flashCards,
 } from './loading.js';
 
+const getCurrentCard = function() {
+  const currentCard = flashCards.filter((element) => {
+    return element.question === questionsField.text();
+  });
+  return currentCard;
+};
+
+const getCurrentCardIndex = function(currentCard) {
+  let currentCardIndex = 0;
+  for (let i = 0; i < flashCards.length; i++) {
+    if (flashCards[i].question === currentCard[0].question) {
+      currentCardIndex = i;
+    }
+  }
+  return currentCardIndex;
+};
+
 const borderBasedOnACRate = (currentCard) => {
-  console.log(`${currentCard.yes} yes with ${currentCard.no} with AC: ${currentCard.ACRate}`);
+  console.log(currentCard);
   if (currentCard.ACRate <= 50) {
     $('.back').css('background-image', 'url(\'art/Answer-50.png\')');
   } else if (currentCard.ACRate <= 75) {
@@ -28,8 +45,25 @@ const shuffle = (arrayToShuffle) => {
   arrayToShuffle.forEach((element) =>{
     flashCards.push(element);
   });
-  console.log(flashCards);
 };
+
+const changeCurrentCard = (yesOrNo) => {
+  const currentCardIndex = getCurrentCardIndex(getCurrentCard());
+  const currentCard = flashCards[currentCardIndex];
+  if (isNaN(currentCard.yes)) {
+    currentCard.yes = 0;
+  }
+  if (isNaN(currentCard.no)) {
+    currentCard.no = 0;
+  }
+  if (isNaN(currentCard.ACRate)) {
+    currentCard.ACRate = 0;
+  }
+  yesOrNo ? currentCard.yes += 1 : currentCard.no += 1;
+  currentCard.ACRate = `${Math.floor((currentCard.yes) / (currentCard.yes + currentCard.no) * 100, 2) || 0 }`;
+  borderBasedOnACRate(currentCard);
+};
+
 
 const answerToQuetion = (yesOrNo) => {
   if (flashCards.length === 1) {
@@ -43,28 +77,6 @@ const answerToQuetion = (yesOrNo) => {
   }
 };
 
-const changeCurrentCard = (yesOrNo) => {
-  const currentCard = getCurrentCard();
-  yesOrNo ? currentCard.yes += 1 : currentCard.no += 1;
-  currentCard.ACRate = `${Math.floor((currentCard.yes) / (currentCard.yes + currentCard.no) * 100, 2) || 0 }`;
-  borderBasedOnACRate(currentCard);
-};
-const getCurrentCard = function() {
-  const currentCard = flashCards.filter((element) => {
-    return element.question === questionsField.text();
-  });
-  return currentCard;
-};
-
-const getCurrentCardIndex = function(currentCard) {
-  let currentCardIndex = 0;
-  for (let i = 0; i < flashCards.length; i++) {
-    if (flashCards[i].question === currentCard[0].question) {
-      currentCardIndex = i;
-    }
-  }
-  return currentCardIndex;
-};
 
 const displayNextCard = () => {
   const currentCard = getCurrentCard();
@@ -86,7 +98,7 @@ const displayNextCard = () => {
   $('.card').css('transform', 'rotateY(0deg)');
 };
 
-const displayNextCardAfterDeletion = function(){
+const displayNextCardAfterDeletion = function() {
   const currentCard = getCurrentCard();
   const currentCardIndex = getCurrentCardIndex(currentCard);
   if (currentCardIndex === flashCards.length - 1) {
@@ -97,7 +109,7 @@ const displayNextCardAfterDeletion = function(){
     questionsField.text(flashCards[currentCardIndex + 1].question);
     answersField.text(flashCards[currentCardIndex + 1].answer);
   }
-}
+};
 
 export {
   borderBasedOnACRate,
@@ -106,5 +118,5 @@ export {
   displayNextCard,
   getCurrentCard,
   getCurrentCardIndex,
-  displayNextCardAfterDeletion
+  displayNextCardAfterDeletion,
 };

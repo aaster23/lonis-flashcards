@@ -102,12 +102,11 @@ body #wrapper #buttonsAndCardWrapper #buttonsWrapper,
 }
 
 #create-Card-Button-X {
-    margin: auto;
-    margin-top: 2rem;
+    margin: 2rem auto;
 }
 
-#create-Card-Button-X img {
-    max-width: 15rem;
+#createCardButton, #exitCreateForm {
+    max-height: 4.5rem;
 }
 
 body #wrapper #buttonsAndCardWrapper #buttonsWrapper img,
@@ -115,9 +114,6 @@ body #wrapper #buttonsAndCardWrapper #buttonsWrapper img,
     max-width: 15rem;
 }
 
-#exitCreateForm {
-    max-height: 4.3rem;
-}
 
 body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer #nextButton {
     position: absolute;
@@ -149,14 +145,13 @@ body #wrapper #formCards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-    margin-left: 31%;
-    margin-right: 31%;
 
 }
 
 body #wrapper #formCards #questionWrapper textarea,
 body #wrapper #formCards #answerWrapper textarea {
     background-color: rgba(0, 0, 0, 0);
+    margin-left: 0;
     margin-top: 20%;
     height: 250px;
     text-align: cetner;
@@ -175,9 +170,8 @@ body #wrapper #formCards #questionWrapper {
     background-size: 100%;
     width: 20rem;
     height: 27rem;
-    margin: 0 auto;
-}
 
+}
 body #wrapper #formCards #answerWrapper {
     background-image: url('./art/Answer-Card.png');
     background-size: 100%;
@@ -189,7 +183,7 @@ body #wrapper #formCards #answerWrapper {
 
 body #wrapper #formWrapper {
     text-align: center;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .flashCard .cardcontainer {
