@@ -16,3 +16,22 @@ The project's purpose is to create an single page application. The application w
 
 ## Link:
 https://gitlab.com/aaster23/lonis-flashcards
+
+
+##Functionalities:
+* Create new flash cards 
+- Add a new flash card
+- Have no duplicate flash 
+
+* Delete a flash card
+- Delete the current flash card
+
+* Get borders based on accuracy rate
+- Answering questions with "I answered" / "I didn't" buttons result in change of the Answers Rate
+- 50%, 75%, 100% borders
+
+* Play audio
+- Play / Stop audio.
+
+* View the total flash cards you have registered.
+* Store the cards in the locall storage, so when you open your browser next time, your cards are still there!
