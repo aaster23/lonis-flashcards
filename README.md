@@ -15,7 +15,7 @@ The project's purpose is to create an single page application. The application w
 * Danail Kirilov - vaitlspaak@gmail.com
 
 ## Link:
-https://gitlab.com/aaster23/lonis-flashcards
+* https://gitlab.com/aaster23/lonis-flashcards
 
 
 ##Functionalities:
