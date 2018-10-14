@@ -87,13 +87,17 @@ const displayNextCard = () => {
     $('#nextButton').toggle();
     shuffle(JSON.stringify(flashCards));
     questionsField.text(flashCards[0].question);
-    answersField.text(flashCards[0].answer);
+    setTimeout(function() {
+      answersField.text(flashCards[0].answer);
+    }, 1000);
   } else {
     $('#yesButton').toggle();
     $('#noButton').toggle();
     $('#nextButton').toggle();
     questionsField.text(flashCards[currentCardIndex + 1].question);
-    answersField.text(flashCards[currentCardIndex + 1].answer);
+    setTimeout(function() {
+      answersField.text(flashCards[currentCardIndex + 1].answer);
+    }, 1000);
   }
   $('.card').css('transform', 'rotateY(0deg)');
 };
