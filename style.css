@@ -147,12 +147,14 @@ body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer .card .front #que
     margin: 25% 10% 0 12%;
     font-size: 1.4rem;
     font-size-adjust: inherit;
+    color: rgb(110, 110, 110)
 }
 
 body #wrapper #buttonsAndCardWrapper .flashCard .cardcontainer .card .back #theAnswerLabel {
     margin: 25% 10% 0 12%;
     font-size: 1.4rem;
     font-size-adjust: inherit;
+    color: rgb(110, 110, 110)
 }
 
 body #wrapper #formWrapper {
@@ -181,6 +183,7 @@ body #wrapper #formCards #answerWrapper textarea {
     font-size: 1.4rem;
     font-size-adjust: inherit;
     font-family: Palladius;
+    color: rgb(110, 110, 110);
 }
 
 body #wrapper #formCards #questionWrapper {
@@ -299,4 +302,14 @@ body #candyWrapper {
     animation-duration: 4000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+.swal-modal {
+    background-color: rgb(253, 175, 192);
+    border: 3px solid white;
+}
+
+.swal-text {
+    color: #ffffff;
+    font-family: Palladius;
 }
