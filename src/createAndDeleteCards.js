@@ -29,6 +29,7 @@ const createNewFlashCardFromForm = () => {
     createNewFlashCardLocally(question.val(), answer.val());
     question.val('Insert question here:');
     answer.val('Insert answer here:');
+    $('#cardsCounter').text(flashCards.length);
   }
 };
 
@@ -53,8 +54,9 @@ const deleteFlashCardQuestions = () => {
     newArr.forEach((element) => {
       flashCards.push(element);
     });
+    localStorage.setItem('flashCards', JSON.stringify(flashCards));
+    $('#cardsCounter').text(flashCards.length);
   }
-  localStorage.setItem('flashCards', JSON.stringify(flashCards));
 };
 
 

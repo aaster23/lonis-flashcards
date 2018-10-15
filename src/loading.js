@@ -13,6 +13,7 @@ $('body').ready(function() {
     $('#theAnswerLabel').text(currentCard.answer);
   }
   $('#nextButton').toggle();
+  $('#cardsCounter').text(flashCards.length);
 });
 
 export {
