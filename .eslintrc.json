@@ -9,7 +9,7 @@
   "rules": {
       "max-len": [
         "error",
-        { "code": 120 }
+        { "code": 240 }
       ],
       // overrides
       "require-jsdoc": 0,

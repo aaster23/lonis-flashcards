@@ -1,81 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Loni's Flashcards</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="./art/favicon.png">
-</head>
-
-<body>
-  <div id="wrapper">
-    <div id="soundButtons">
-      <audio loop autoplay id="sound1" src="./sound/Sound.mp3"></audio>
-      <img id="soundEffect" src="art/Play-Audio-Button.png" onclick="document.getElementById('sound1').play();"
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loni's Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./art/favicon.png">
+  </head>
+  
+  <body>
+    <div id="wrapper">
+      <div id="soundButtons">
+        <audio loop autoplay id="sound1" src="./sound/Sound.mp3"></audio>
+        <img id="soundEffect" src="art/Play-Audio-Button.png" onclick="document.getElementById('sound1').play();"
         onmouseover="this.src='art/Play-Audio-Button-Hover.png'" onmouseout="this.src='art/Play-Audio-Button.png'" />
-      <img id="soundEffect" src="art/Stop-Audio.png" onclick="document.getElementById('sound1').pause();" onmouseover="this.src='art/Stop-Audio-Hover.png'"
+        <img id="soundEffect" src="art/Stop-Audio.png" onclick="document.getElementById('sound1').pause();" onmouseover="this.src='art/Stop-Audio-Hover.png'"
         onmouseout="this.src='art/Stop-Audio.png'" />
-    </div>
-    <div id="lonnisMessage">
-      <h1>Welcome to Loni's Flashcards</h1>
-    </div>
-    <div id="buttonsAndCardWrapper">
-      <div id="buttonsWrapper">
-        <span id="cardsInDeckLabel">Cards in Deck: <span id="cardsCounter">0</span> </span>
-        <img id="createButton" src="art/Create-button.png" onmouseover="this.src='art/Create-Hover-Button.png'"
-          onmouseout="this.src='art/Create-button.png'" />
-        <img id="archiveButton" src="art/Delete-Card-Button.png" onmouseover="this.src='art/Delete-Card-Button-Hover.png'"
-          onmouseout="this.src='art/Delete-Card-Button.png'" />
       </div>
-      <div class="flashCard">
-        <div class="cardcontainer">
-          <div class="card">
-            <div class="front">
-              <div id="question">
-                <p id="questionText"></p>
+      <div id="lonnisMessage">
+        <h1>Welcome to Loni's Flashcards</h1>
+      </div>
+      <div id="buttonsAndCardWrapper">
+        <div id="buttonsWrapper">
+          <img id="createButton" src="art/Create-button.png" onmouseover="this.src='art/Create-Hover-Button.png'"
+          onmouseout="this.src='art/Create-button.png'" />
+          <img id="archiveButton" src="art/Delete-Card-Button.png" onmouseover="this.src='art/Delete-Card-Button-Hover.png'"
+          onmouseout="this.src='art/Delete-Card-Button.png'" />
+        </div>
+        <div class="flashCard">
+          <div class="cardcontainer">
+            <div class="card">
+              <div class="front">
+                <div id="question">
+                  <p id="questionText"></p>
+                </div>
+              </div>
+              <div class="back">
+                <p id="theAnswerLabel"></p>
               </div>
             </div>
-            <div class="back">
-              <p id="theAnswerLabel"></p>
+            <div id="nextButton">
+              <img src="art/Next-Button.png" onmouseover="this.src='art/Next-Hover-Button.png'" onmouseout="this.src='art/Next-Button.png'" />
             </div>
           </div>
-          <div id="nextButton">
-            <img src="art/Next-Button.png" onmouseover="this.src='art/Next-Hover-Button.png'" onmouseout="this.src='art/Next-Button.png'" />
+        </div>
+        <div id="buttons2Wrapper">
+          <img id="yesButton" src="art/I-Answered-Button.png" onmouseover="this.src='art/I-Answered-Hover-Button.png'"
+          onmouseout="this.src='art/I-Answered-Button.png'" />
+          <img id="noButton" src="art/I-Didnt-Button.png" onmouseover="this.src='art/I-Didnt-Hover-Button.png'"
+          onmouseout="this.src='art/I-Didnt-Button.png'" />
+        </div>
+      </div>
+      <div id="formWrapper">
+        <div id="formCards">
+          <div id="questionWrapper">
+            <textarea id="questionInput" type="required" maxlength="150">Insert question here:</textarea>
+          </div>
+          <div id="answerWrapper">
+            <textarea id="answerInput" type="required" maxlength="150">Insert answer here:</textarea>
           </div>
         </div>
-      </div>
-      <div id="buttons2Wrapper">
-        <img id="yesButton" src="art/I-Answered-Button.png" onmouseover="this.src='art/I-Answered-Hover-Button.png'"
-          onmouseout="this.src='art/I-Answered-Button.png'" />
-        <img id="noButton" src="art/I-Didnt-Button.png" onmouseover="this.src='art/I-Didnt-Hover-Button.png'"
-          onmouseout="this.src='art/I-Didnt-Button.png'" />
-      </div>
-    </div>
-    <div id="formWrapper">
-      <div id="formCards">
-        <div id="questionWrapper">
-          <textarea id="questionInput" type="required" maxlength="150">Insert question here:</textarea>
-        </div>
-        <div id="answerWrapper">
-          <textarea id="answerInput" type="required" maxlength="150">Insert answer here:</textarea>
-        </div>
-      </div>
-      <div id="create-Card-Button-X">
-        <img id="createCardButton" src="art/Create-Card-Buttons.png" onmouseover="this.src='art/Create-Card-Buttons-Hover.png'"
+        <div id="create-Card-Button-X">
+          <img id="createCardButton" src="art/Create-Card-Buttons.png" onmouseover="this.src='art/Create-Card-Buttons-Hover.png'"
           onmouseout="this.src='art/Create-Card-Buttons.png'" />
-        <img id="exitCreateForm" src="art/Go-Back-Button.png" onmouseover="this.src='art/Go-Back-Hover-Button.png'"
+          <img id="exitCreateForm" src="art/Go-Back-Button.png" onmouseover="this.src='art/Go-Back-Hover-Button.png'"
           onmouseout="this.src='art/Go-Back-Button.png'" />
+        </div>
       </div>
     </div>
-  </div>
-  <div id="candyWrapper">
-    <div id="lillipopWrapper"><img class="lollipop" src="./art/circle.png"></div>
-    <div id="cakes">
-      <img src="./art/Lollypops.png" />
-    </div>
+    <div id="cardsInDeckLabel">Cards in Deck: <span id="cardsCounter">0</span> </div>
+    <div id="candyWrapper">
+      <div id="lillipopWrapper"><img class="lollipop" src="./art/circle.png"></div>
+      <div id="cakes">
+        <img src="./art/Lollypops.png" />
+      </div>
   </div>
   <div class="footer">
     <p>All Right Reserved. Loni's Flashcards&#174;. Telerik Academy - JavaScript August 2018</p>

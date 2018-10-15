@@ -120,7 +120,6 @@ body #wrapper #buttonsAndCardWrapper #buttonsWrapper,
 #create-Card-Button-X img {
     max-width: 15rem;
     margin: auto;
-
 }
 
 #createCardButton,
@@ -321,16 +320,13 @@ body #candyWrapper {
 #cardsInDeckLabel {
     text-align: center;
     font-size: 1.5rem;
-    color: #808080;
+    color: #ffffff;
     font-family: Palladius;
-    margin: 0.8rem;
-
 }
 
 body #wrapper #buttonsAndCardWrapper #buttonsWrapper {
     display: flex;
     flex-direction: column;
     flex-grow: inherit;
-    margin: 50% auto;
-    margin-top: 32%;
+    margin: 52% auto;
 }
