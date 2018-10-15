@@ -24,7 +24,6 @@ const getCurrentCardIndex = function(currentCard) {
 };
 
 const borderBasedOnACRate = (currentCard) => {
-  console.log(currentCard);
   if (currentCard.ACRate <= 50) {
     $('.back').css('background-image', 'url(\'art/Answer-50.png\')');
   } else if (currentCard.ACRate <= 75) {

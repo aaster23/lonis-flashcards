@@ -4,6 +4,7 @@ import { answerToQuetion, changeCurrentCard, displayNextCard, getCurrentCard, ge
 import { createNewFlashCardFromForm, createNewFlashCardLocally, deleteFlashCardQuestions } from './createAndDeleteCards.js';
 const manipulateDom = function() {
   $('#archiveButton').click(function() {
+
     deleteFlashCardQuestions();
   });
 
