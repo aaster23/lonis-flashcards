@@ -314,18 +314,17 @@ body #candyWrapper {
     font-family: Palladius;
 }
 
-#cardsCounter {
-    max-width: 14rem;
-    width: 14rem;
-    max-height: 4rem;
-    height: 3.5rem;
+.swal-title {
+    color: white;
+}
+
+#cardsInDeckLabel {
     text-align: center;
-    margin-left: 0.5rem;
-    padding-right: 0.3rem;
-    margin-bottom: 0.3rem;
-    font-size: 1.8rem;
-    color: #9e3e28;
-    vertical-align: middle;
+    font-size: 1.5rem;
+    color: #808080;
+    font-family: Palladius;
+    margin: 0.8rem;
+
 }
 
 body #wrapper #buttonsAndCardWrapper #buttonsWrapper {
