@@ -37,6 +37,8 @@ const deleteFlashCardQuestions = () => {
     throw swal('You must have atleast one card!');
   } else {
     const currentCard = getCurrentCard()[0];
+    swal({ title: `Successfully deleted card with question:`,
+      text: `${currentCard.question}`});
     displayNextCardAfterDeletion();
     const newArr = flashCards.reduce((acc, element) =>{
       if (element.question === currentCard.question) {
@@ -52,7 +54,6 @@ const deleteFlashCardQuestions = () => {
       flashCards.push(element);
     });
   }
-  console.log(flashCards);
   localStorage.setItem('flashCards', JSON.stringify(flashCards));
 };
 

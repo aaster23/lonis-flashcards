@@ -313,3 +313,25 @@ body #candyWrapper {
     color: #ffffff;
     font-family: Palladius;
 }
+
+#cardsCounter {
+    max-width: 14rem;
+    width: 14rem;
+    max-height: 4rem;
+    height: 3.5rem;
+    text-align: center;
+    margin-left: 0.5rem;
+    padding-right: 0.3rem;
+    margin-bottom: 0.3rem;
+    font-size: 1.8rem;
+    color: #9e3e28;
+    vertical-align: middle;
+}
+
+body #wrapper #buttonsAndCardWrapper #buttonsWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: inherit;
+    margin: 50% auto;
+    margin-top: 32%;
+}

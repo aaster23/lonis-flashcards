@@ -11,7 +11,6 @@ $('body').ready(function() {
     const currentCard = flashCards[0];
     $('#questionText').text(currentCard.question);
     $('#theAnswerLabel').text(currentCard.answer);
-    console.log(currentCard);
   }
   $('#nextButton').toggle();
 });
