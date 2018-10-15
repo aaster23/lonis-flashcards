@@ -1,4 +1,5 @@
 import * as $ from 'jquery';
+import * as sweetAlert from 'sweetalert';
 import {
   questionsField,
   answersField,
@@ -42,7 +43,7 @@ const shuffle = (arrayToShuffle) => {
   while (flashCards.length > 0) {
     flashCards.pop();
   }
-  arrayToShuffle.forEach((element) =>{
+  arrayToShuffle.forEach((element) => {
     flashCards.push(element);
   });
 };
@@ -67,8 +68,21 @@ const changeCurrentCard = (yesOrNo) => {
 
 const answerToQuetion = (yesOrNo) => {
   if (flashCards.length === 1) {
-    throw alert('There are no cards, you must add some!');
-  } else {
+    swal({
+      title: 'Your deck has only one card! You need more cards to be able to answer!',
+      text: 'Do you want to create new cards?',
+      buttons: {
+        cancel: true,
+        confirm: 'Create',
+      },
+    }).then((val) =>{
+      if (val) {
+        $('#buttonsAndCardWrapper').hide('Scale');
+        $('#formWrapper').show('Slide');
+      }
+    });
+  }
+  else {
     changeCurrentCard(yesOrNo);
     $('#yesButton').toggle();
     $('#noButton').toggle();
