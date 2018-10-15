@@ -25,5 +25,4 @@ The project's purpose is to create an single page application. The application w
 - Answering questions with "I answered" / "I didn't" buttons result in change of the Answers Rate
 - 50%, 75%, 100% borders
 - Play / Stop audio.
-- View the total flash cards you have registered.
-- Store the cards in the locall storage, so when you open your browser next time, your cards are still there!
+- Store the cards in the local storage, so when you open your browser next time, your cards are still there!
