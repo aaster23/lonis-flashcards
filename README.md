@@ -26,3 +26,4 @@ The project's purpose is to create an single page application. The application w
 - 50%, 75%, 100% borders
 - Play / Stop audio.
 - Store the cards in the local storage, so when you open your browser next time, your cards are still there!
+- Display number of cards in deck.

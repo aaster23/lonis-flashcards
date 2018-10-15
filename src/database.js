@@ -49,7 +49,7 @@ const flashCards = [{
 },
 {
   question: 'What is \"this\" keyword in JavaScript? Provide an example.',
-  answer: 'This is actually a binding that is made when a function is invoced, and what is references is determined entirely by the call-site where the function is called.',
+  answer: 'This is actually a binding that is made when a function is invoked, and what it references is determined entirely by the call-site where the function is called.',
   yes: 0,
   no: 0,
   ACRate: 0,
@@ -63,7 +63,7 @@ const flashCards = [{
 },
 {
   question: 'What is an immediately-invoked function expression? Why use it? Provide an example.',
-  answer: 'IIFE is executes immediately after it\'s created. This avoid polluting the global namespace.',
+  answer: 'IIFE is executed immediately after it\'s created. This avoid polluting the global namespace.',
   yes: 0,
   no: 0,
   ACRate: 0,
@@ -126,7 +126,7 @@ const flashCards = [{
 },
 {
   question: 'How to attach dynamic events on the DOM with jQuery?',
-  answer: '$(myFunction).on()',
+  answer: '$(myElement).on()',
   yes: 0,
   no: 0,
   ACRate: 0,
